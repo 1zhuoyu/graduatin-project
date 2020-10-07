@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="referrer" content="never">
+        <meta name=”viewport” content=”width=device-width, initial-scale=1″ />
+        <link rel="shortcut icon" href="file://C:/Users/27722/Desktop/graduatin project/image/shop.png" type="image/x-icon">
+        <title>注册</title>
+        <style type="text/css">
+    *{
+        /*初始化*/
+        margin: 0px;
+        padding:0px;
+    }
+    body
+    {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background:url("file://C:/Users/27722/Desktop/graduatin project/image/starsky.jpg");
+		background-size: cover;  
+    }
+    .box
+    {
+        position: absolute;
+		top: 80%;
+		left: 20%;
+        height: 90%;
+		transform: translate(-50%,-50%);
+		width: 40%;
+        padding: 5%;
+		background: rgba(26, 143, 189, 0.4);
+		box-sizing: border-box;
+		box-shadow: 0 15px 25px rgba(0,0,0,.5);
+		border-radius: 10px;
+        text-align: center;
+    }
+    #box1{
+        position: absolute;
+        top: 60px;
+        left:10%;
+        font-size: 1.2em;
+        text-align: center;
+        float: left;
+        color: rgb(230, 107, 7);
+    }
+    #box1 a{
+        text-decoration: none;
+        padding-right: 80px;
+        color: #fff;
+    }
+    .box #inputes {
+		position: relative;
+	}
+	.box #inputes input {
+		width: 100%;
+		padding: 10px 0;
+		font-size: 16px;
+		color: #fff;
+		margin-bottom: 30px;
+		border: none;
+		border-bottom: 1px solid #fff;
+		outline: none;
+		background: transparent;
+	}
+    .box #inputes label {
+		position: absolute;
+		top: 0;
+		left: 0;
+		letter-spacing: 1px;
+		padding: 10px 0;
+		font-size: 16px;
+		color: #fff;
+		pointer-events: none;
+		transition: 0.5s;		
+	}
+    /*标签样式*/
+    .box #inputes input:focus ~ label,
+    .box #inputes input:valid ~ label
+    {
+		top: -23px;
+		left: 0;
+		color: aqua;
+		font-size: 12px;
+	}
+    #function input{
+        border-radius: 3%;/*圆角*/
+        width: 70px;
+        height: 30px;
+        background:rgba(12, 212, 212, 0.2);
+        border: 1px solid #CDC28D; /* 输入框表框颜色*/
+    }
+    #function button{
+        border-radius: 3%;/*圆角*/
+        width: 70px;
+        height: 30px;
+        background:rgba(12, 212, 212, 0.2);
+        border: 1px solid #CDC28D; /* 输入框表框颜色*/
+    }
+    #mima a{
+        text-decoration: none;/*取消下滑线*/
+        color: rgb(202, 114, 5);
+    }
+    #mima a:hover{
+        color: rgb(247, 10, 10); /*鼠标移动到链接的颜色*/
+	    text-decoration: underline;/*下滑线*/
+    }
+    #tip
+    {
+        float: left;
+        font-size: 10em;
+    }
+        </style>
+    </head>
+    <body>
+        <!-- 上方标识栏 -->
+        <div id=box1>
+        <a href="shouye.html">首页</a>
+        <a href="guanyu.html">关于</a>
+        <a href="shop.html">商店</a>
+        <a href="connect.html">联系</a>
+        </div>
+        <div class=box>
+        <!-- 注册主体 -->
+        <form action="shouye.html" autocomplete="off" method="POST">
+
+            <div id=inputes>
+                <div id=Use>
+                    <input type="text" name="usename" id="user"  required oninvalid="setCustomValidity('用户名不能为空')" 
+                    oninput="setCustomValidity('')"/>
+                <label>用户名</label><br></div>   
+            </div>
+            
+            <div id=inputes>
+                <div><input type="password"  name="password" id="pass1" required oninvalid="setCustomValidity('密码不能为空')" 
+                    oninput="setCustomValidity('')"/>
+                    <label>密码</label><br>  
+                </div>
+            </div>
+
+            <div id=inputes>
+                <div>
+                    <input type="password"  name="password" id="pass2" onkeyup="validate()" required oninvalid="setCustomValidity('密码不能为空')" 
+                    oninput="setCustomValidity('')"/>
+                    <label>确认密码</label><br>  
+                </div>
+            </div>
+
+            <div id=inputes>
+                <div>
+                    <input type="text" name="" id="user"  required oninvalid="setCustomValidity('学号不能为空')" 
+                    oninput="setCustomValidity('')"/>
+                    <label>学号</label><br>
+                </div>
+            </div>
+
+            <div id=inputes>
+                <div>
+                    <input type="password" name="password" id="xhmm"  required oninvalid="setCustomValidity('密码不能为空')" 
+                    oninput="setCustomValidity('')"/>
+                    <label>学号密码</label><br>
+                </div>
+            </div>
+
+            <span id="tip"></span><br><br>
+            <div id=function>
+            <input type="submit" value="提交" id="submit" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               <input type="reset" value="重置"/>
+            </div>
+            <script>
+            function validate() {
+                var pass1 = document.getElementById("pass1").value;
+                var pass2 = document.getElementById("pass2").value;
+                if(pass1 == pass2) {
+                document.getElementById("tip").innerHTML="<font color='green'>两次密码相同</font>";
+                document.getElementById("submit").disabled = false;
+                }
+                else {
+                document.getElementById("tip").innerHTML="<font color='red'>两次密码不相同</font>";
+                document.getElementById("submit").disabled = true;
+                }
+                }</script>           
+        </form>
+        </div> 
+        <!-- 验证密码 -->
+        
+    </body>
+</html>

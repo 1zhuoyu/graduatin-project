@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="referrer" content="never">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="file://C:/Users/27722/Desktop/graduatin project/image/shop.png" type="image/x-icon">
+        <title>登陆</title>
+        <style type="text/css">
+    *{
+        /*初始化*/
+        margin: 0px;
+        padding:0px;
+    }
+    body
+    {
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background:url("file://C:/Users/27722/Desktop/graduatin project/image/starsky.jpg");
+		background-size: cover;  
+    }
+    .box
+    {
+        position: absolute;
+		top: 50%;
+        left: 20%;
+        height: auto;
+		transform: translate(-50%,-50%);
+		width: 400px;
+        padding: 40px;
+		background: rgba(26, 143, 189, 0.4);
+		box-sizing: border-box;
+		box-shadow: 0 15px 25px rgba(0,0,0,.5);
+		border-radius: 10px;
+        text-align: center;
+    }
+    #box1{
+        position: absolute;
+        top: 60px;
+        left:30%;
+        font-size: 30px;
+        text-align: center;
+        color: rgb(230, 107, 7);
+    }
+    #box1 a{
+        text-decoration: none;
+        padding-right: 80px;
+        color: #fff;
+    }
+    .box #inputs {
+		position: relative;
+	}
+	.box #inputs input {
+		width: 100%;
+		padding: 10px 0;
+		font-size: 16px;
+		color: #fff;
+		margin-bottom: 30px;
+		border: none;
+		border-bottom: 1px solid #fff;
+		outline: none;
+		background: transparent;
+	}
+    .box #inputs label {
+		position: absolute;
+		top: 0;
+		left: 0;
+		letter-spacing: 1px;
+		padding: 10px 0;
+		font-size: 16px;
+		color: #fff;
+		pointer-events: none;
+		transition: .5s;		
+	}
+    /*标签样式*/
+    .box #inputs input:focus ~ label,
+    .box #inputs input:valid ~ label
+    {
+		top: -23px;
+		left: 0;
+		color: aqua;
+		font-size: 12px;
+	}
+    #function input{
+        border-radius: 3%;/*圆角*/
+        width: 70px;
+        height: 30px;
+        background:rgba(12, 212, 212, 0.2);
+        border: 1px solid #CDC28D; /* 输入框表框颜色*/
+    }
+    #function button{
+        border-radius: 3%;/*圆角*/
+        width: 70px;
+        height: 30px;
+        background:rgba(12, 212, 212, 0.2);
+        border: 1px solid #CDC28D; /* 输入框表框颜色*/
+    }
+    #mima a{
+        text-decoration: none;/*取消下滑线*/
+        color: rgb(202, 114, 5);
+    }
+    #mima a:hover{
+        color: rgb(247, 10, 10); /*鼠标移动到链接的颜色*/
+	    text-decoration: underline;/*下滑线*/
+    }
+        </style>
+    </head>
+    <body>
+        <div id=box1>
+        <a href="shouye.html">首页</a>
+        <a href="guanyu.html">关于</a>
+        <a href="shop.html">商店</a>
+        <a href="connect.html">联系</a>
+    </div>
+        <div class=box>
+        <form action="shouye.html" autocomplete="off" method="POST">
+            <div id=inputs>
+                <div id=Use>
+                    <input type="text" name="usename" id="user"  required oninvalid="setCustomValidity('用户名不能为空')" 
+                    oninput="setCustomValidity('')">
+                <label>账户名</label><br></div>   
+            </div>
+            <div id=inputs>
+                <div id=Pass></div>
+                 <input type="password"  name="password" id="pass" required oninvalid="setCustomValidity('密码不能为空')" 
+                 oninput="setCustomValidity('')">
+                <label>密码</label><br>    
+            </div>
+            <div id=function>           
+                <input type="submit" value="登陆">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="reset" value="重置">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button id="zc" onclick="window.location.href='zhuche.html'">注册</button><br><br>
+            </div>
+            <div id=mima>
+            <input type="checkbox" value="记住密码" id="box" name="remember">记住密码
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="">忘记密码</a>
+            </div>
+        </form>
+        </div>
+    </body>
+</html>
