@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="download/font/iconfont.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/html/css/shopcar.css" />
+    <title>我的购物车</title>
+
+</head>
+
+<body>
+    <script type="text/javascript" src="/html/js/nav.js"></script>
+    <div class="container">
+        <div class="car" id="car">
+            <div class="head_row hid">
+                <div class="check left"><em onclick="checkAll()"></em></div>
+                <div class="img left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;全选</div>
+                <div class="name left">商品名称</div>
+                <div class="price left">单价</div>
+                <div class="number left">&nbsp;&nbsp;数量</div>
+                <div class="subtotal left">小计</div>
+                <div class="ctrl left">操作</div>
+            </div>
+        </div>
+        <div id="sum_area">
+            <div id="pay">去结算</div>
+            <div id="pay_amout">合计：<span id="price_num">0</span>元</div>
+        </div>
+        <div id="box">
+            <h2 class="box_head"><span>买购物车中商品的人还买了</span></h2>
+            <ul>
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript" src="/html/js/shopcar.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+/* 重置浏览器默认样式 */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* 主体部分 */
+
+body {
+    font-family: serif;
+    background-color: rgb(219, 221, 221);
+}
+
+.navbar-default {
+    width: 100vw;
+    height: 8vh;
+    padding: 0 0 0 0rem;
+    margin: 0 0 0 0rem;
+    position: fixed;
+    z-index: 2;
+}
